@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  morning-routine:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    container_name: morning-routine-system
+    image: morning-routine:latest
+    environment:
+      - TZ=${TIMEZONE:-UTC}
+      - CALENDAR_NAME=${CALENDAR_NAME:-Personal}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+    volumes:
+      # Mount daily notes, goals, and notes directories
+      - ./data/Daily:/app/Daily
+      - ./data/Goals:/app/Goals
+      - ./data/Notes:/app/Notes
+      # Mount gcalcli config for persistence
+      - ./data/.gcalcli:/app/.gcalcli
+      # Mount claude commands (for easy updates)
+      - ../.claude:/app/.claude:ro
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    networks:
+      - morning-routine-net
+
+networks:
+  morning-routine-net:
+    driver: bridge
+
+volumes:
+  daily-data:
+  goals-data:
+  notes-data:
+  gcalcli-config:
