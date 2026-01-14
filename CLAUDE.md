@@ -8,6 +8,22 @@ Morning Routine System - An automated morning routine workflow for Claude Code t
 
 **Repository:** `leviceroy/morning-routine-system`
 **License:** MIT
+**Current Version:** 1.1.0
+
+## ⚠️ CRITICAL: Versioning Rules
+
+When making changes to the Morning Routine System:
+
+1. **Increment version by 0.1** for each update (e.g., v1.1 → v1.2 → v1.3)
+2. **Only use different versioning** if the user explicitly requests it
+3. **Update ALL version references** when incrementing:
+   - `CLAUDE.md` - Current Version field above
+   - `README.md` - Changelog section
+   - `PACKAGE_SUMMARY.md` - Version field at bottom
+   - `docker/Dockerfile` - LABEL version
+   - `GITHUB_SETUP.md` - Social media example (if applicable)
+4. **Add changelog entry** in README.md with date and bullet points of changes
+5. **Commit message** should reference the new version
 
 ## Directory Structure
 

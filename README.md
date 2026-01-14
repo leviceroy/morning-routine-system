@@ -174,6 +174,13 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 - `TROUBLESHOOTING.md` - Added new section for "Schedule-Day Creates File But Skips Calendar Events"
 - `CONFIGURATION.md` - Added time format best practices section
 
+### v1.1 (2026-01-14)
+
+- Updated calendar integration with CRITICAL/MANDATORY instructions
+- Enhanced schedule-day workflow for reliable event creation
+- Added troubleshooting for calendar event issues
+- Improved time format documentation
+
 ### v1.0 (2026-01-06)
 
 - Initial release with full morning routine workflow

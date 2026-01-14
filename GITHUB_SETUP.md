@@ -260,7 +260,7 @@ jobs:
 ### Example Post
 
 ```
-🌅 Just released Morning Routine System v1.0!
+🌅 Just released Morning Routine System v1.1!
 
 An automated morning workflow for Claude Code that helps you:
 - Review yesterday's patterns

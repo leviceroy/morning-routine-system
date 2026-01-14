@@ -4,7 +4,7 @@ FROM python:3.11-slim
 # Set labels
 LABEL maintainer="leviceroy"
 LABEL description="Morning Routine System with Claude Code and gcalcli"
-LABEL version="1.0.0"
+LABEL version="1.1.0"
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
